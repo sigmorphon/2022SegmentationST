@@ -1,4 +1,4 @@
-# The 2022 SIGMORPHON Shared Task on Morpheme Segmentation.
+# SIGMORPHON 2022 Shared task on Morpheme Segmentation
 
 Morphemes (prefixes, suffixes, root words) are linguistic descriptions, defined as the smallest meaningful unit of words. Our proposed shared task is morpheme
 segmentation that converts a text into a sequence of morphemes. In order to prepare a dataset for this task, we integrated all basic types of morphological
