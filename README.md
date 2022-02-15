@@ -15,7 +15,7 @@ At the word level, participants will be asked to segment a given word into a seq
 ### Data
 Training and development data are UTF-8-encoded tab-separated values files. Each example occupies a single line and consists of input word, the corresponding morpheme sequence, and the corresponding morphological category (optional information should be used only to oversample or undersample training data). The following shows three lines of English data:
     
-    inaccuracies  in@@ accurate @@cy @@s  110
+    inaccuracies  in @@accurate @@cy @@s  110
     dictionary  dictionary  000
     screwdriver screw @@drive @@er  011
 
