@@ -133,7 +133,7 @@ We will provide python evaluation scripts, reporting the following evaluation me
 - Amarsanaa Ganbold (National University of Mongolia)
 - Šárka Dohnalová (Charles University)
 - Magda Ševčíková (Charles University)
-- Kateřina Pelegrinová (Charles University)
+- Kateřina Pelegrinová (University of Ostrava)
 - Fausto Giunchiglia (University of Trento)
 - Ryan Cotterell (ETH Zürich)
 - Ekaterina Vylomova (University of Melbourne)
