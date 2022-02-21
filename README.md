@@ -79,8 +79,7 @@ In above example, `эмээ` is a hononym of two different words, first means a 
 Development languages are:
 1.  `ces`: Czech
 2.  `eng`: English
-3.  `hun`: Hungarian
-4.  `mon`: Mongolian
+3.  `mon`: Mongolian
 
 ### Data Statistics
 
