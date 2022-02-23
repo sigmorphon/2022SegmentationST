@@ -9,6 +9,10 @@ benefit a lot by innovating subword-based tokenization with this task. This shar
 + ***Part 1***: [Word-level morpheme segmentation](https://github.com/sigmorphon/2022SegmentationST#)
 + ***Part 2***: [Sentence-level morpheme segmentation](https://github.com/sigmorphon/2022SegmentationST#)
 
+Please join our [Google Group](https://groups.google.com/g/sigmorphon-morpheme-segmentation/join) to stay up to date.
+
+Click here to [register for the task](https://forms.gle/J3vsp11n338XbpYD6)!
+
 ## Part 1: Word-level Morpheme Segmentation
 At the word level, participants will be asked to segment a given word into a sequence of morphemes. Input words contains all types of word forms: root words, derived words, inflected words, and compound words.
 
@@ -24,17 +28,16 @@ First example is a derived word with prefix (in-) and suffixes (-cy and -s), and
 ### Languages
 Development languages are:
 1.  `ces`: Czech
-2.  `deu`: German
-3.  `eng`: English
-4.  `fra`: French
-5.  `hun`: Hungarian
-6.  `spa`: Spanish
-7.  `ita`: Italian
-8.  `lat`: Latin
-9.  `rus`: Russian
+2.  `eng`: English
+3.  `fra`: French
+4.  `hun`: Hungarian
+5.  `spa`: Spanish
+6.  `ita`: Italian
+7.  `lat`: Latin
+8.  `rus`: Russian
+Note: within the next 24 hours, we will add the training and development data of Spanish, Hungarian, and Italian for the word-level part.
 
 ### Data Statistics
-
 | word class | English | Spanish | Hungarian | French | Italian | Russian | Czech | Latin |
 |:-----:|---------|---------|-----------|--------|---------|---------|-------|-------|
 |  100  |  126544 |  502229 |    436753 | 105192 |  253455 |  221760 |     - |   831991 |
