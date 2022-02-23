@@ -9,7 +9,7 @@ benefit a lot by innovating subword-based tokenization with this task. This shar
 + ***Part 1***: [Word-level morpheme segmentation](https://github.com/sigmorphon/2022SegmentationST#)
 + ***Part 2***: [Sentence-level morpheme segmentation](https://github.com/sigmorphon/2022SegmentationST#)
 
-Please join our [Google Group](https://groups.google.com/g/sigmorphon-morpheme-segmentation/join) to stay up to date.
+Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon-morpheme-segmentation/join) to stay up to date.
 
 Click here to [register for the task](https://forms.gle/J3vsp11n338XbpYD6)!
 
