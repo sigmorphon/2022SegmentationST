@@ -50,7 +50,7 @@ Development languages are:
 ### Word category description
 For some of the development languages, we are providing the word categories so that participant can deal with imbalanced situation of morphological categories. 
 
-| word class | Description                      | English example                        |
+| word class | Description                      | English example (input ==> output)     |
 |------------|----------------------------------|----------------------------------------|
 | 100        | Inflection only                  | played ==> play @@ed                   |
 | 010        | Derivation only                  | player ==> play @@er                   |
