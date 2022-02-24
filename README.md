@@ -13,6 +13,8 @@ Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorpho
 
 Click here to [register for the task](https://forms.gle/J3vsp11n338XbpYD6)!
 
+Please open the issues if you have any questions.
+
 ## Part 1: Word-level Morpheme Segmentation
 At the word level, participants will be asked to segment a given word into a sequence of morphemes. Input words contains all types of word forms: root words, derived words, inflected words, and compound words.
 
