@@ -37,7 +37,8 @@ Development languages are:
 6.  `ita`: Italian
 7.  `lat`: Latin
 8.  `rus`: Russian
-Note: within the next 24 hours, we will add the training and development data of Spanish, Hungarian, and Italian for the word-level part.
+
+_Note: within the next 24 hours, we will add the training and development data of Spanish, Hungarian, and Italian for the word-level part._
 
 ### Data Statistics
 | word class | English | Spanish | Hungarian | French | Italian | Russian | Czech | Latin |
