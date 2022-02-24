@@ -17,11 +17,13 @@ Click here to [register for the task](https://forms.gle/J3vsp11n338XbpYD6)!
 At the word level, participants will be asked to segment a given word into a sequence of morphemes. Input words contains all types of word forms: root words, derived words, inflected words, and compound words.
 
 ### Data
-Training and development data are UTF-8-encoded tab-separated values files. Each example occupies a single line and consists of input word, the corresponding morpheme sequence, and the corresponding morphological category (optional information should be used only to oversample or undersample training data). The following shows three lines of English data:
+Training and development data are UTF-8-encoded tab-separated values files. Each example occupies a single line and consists of input word, the corresponding morpheme sequence, and the corresponding morphological category. The following shows three lines of English data:
     
     inaccuracies  in @@accurate @@cy @@s  110
     dictionary  dictionary  000
     screwdriver screw @@drive @@er  011
+
+Note: The third column as morphological category is optional feature which can only be used to oversample or undersample training data.
 
 First example is a derived word with prefix (in-) and suffixes (-cy and -s), and second example is a root word. Third example is a compound word. In the test datasets, we will provide only first column of data as input words. 
 
