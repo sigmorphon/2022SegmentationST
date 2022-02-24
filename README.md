@@ -23,7 +23,7 @@ Training and development data are UTF-8-encoded tab-separated values files. Each
     dictionary  dictionary  000
     screwdriver screw @@drive @@er  011
 
-Note: The third column as morphological category is optional feature which can only be used to oversample or undersample training data.
+<i> Note: The third column as morphological category is optional feature which can only be used to oversample or undersample training data.</i>
 
 First example is a derived word with prefix (in-) and suffixes (-cy and -s), and second example is a root word. Third example is a compound word. In the test datasets, we will provide only first column of data as input words. 
 
