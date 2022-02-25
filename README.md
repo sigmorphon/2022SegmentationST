@@ -111,7 +111,7 @@ We will provide python evaluation scripts, reporting the following evaluation me
 ### Development Phase
 
 - ~~February 23, 2022: Training splits for development languages are released.~~
-- February 28, 2022: **Training** and development splits for development languages are released.
+- February 28, 2022: **_Training_** and development splits for development languages are released.
 - March 5, 2022: Baseline code, and results released.
 
 ### Generalization Phase
