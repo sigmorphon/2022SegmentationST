@@ -12,8 +12,6 @@ benefit a lot by innovating subword-based tokenization with this task. This shar
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon-morpheme-segmentation/join) to stay up to date.
 Click here to [register for the task](https://forms.gle/J3vsp11n338XbpYD6)!
 
-Training and development datasets are released at https://github.com/sigmorphon/2022SegmentationST/tree/v0.1
-
 Please open the issues if you have any questions.
 
 Two subtasks will be scored separately. Participant teams may submit as many systems as they want to as many subtasks as they want.
@@ -111,8 +109,8 @@ We will provide python evaluation scripts, reporting the following evaluation me
 
 ### Development Phase
 
-- February 23, 2022: Training splits for development languages are released.
-- February 28, 2022: Development splits for development languages are released.
+- February 23, 2022: Training splits for development languages are released at https://github.com/sigmorphon/2022SegmentationST/tree/v0.1
+- February 28, 2022: Development splits for development languages are released at https://github.com/sigmorphon/2022SegmentationST/tree/v0.1
 - March 5, 2022: Baseline code, and results released.
 
 ### Generalization Phase
