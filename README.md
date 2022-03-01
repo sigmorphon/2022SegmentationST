@@ -143,6 +143,9 @@ We will provide python evaluation scripts, reporting the following evaluation me
 - Ryan Cotterell (ETH Zürich)
 - Ekaterina Vylomova (University of Melbourne)
 
+## License
+The data is released under the [Creative Commons Attribution-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-sa/3.0/legalcode) inherited from Wiktionary itself.
+
 ## References
 
 Kirov, C., Cotterell, R., Sylak-Glassman, J., Walther, G., Vylomova, E., Xia, P., Faruqui, M., Mielke, S., McCarthy, A., Kübler, S., Yarowsky, D., Eisner, J., and Hulden, M. (2018). [UniMorph 2.0: Universal Morphology](https://arxiv.org/abs/1810.11101). Proceedings of LREC 2018.
