@@ -10,8 +10,9 @@ benefit a lot by innovating subword-based tokenization with this task. This shar
 + ***Part 2***: [Sentence-level morpheme segmentation](https://github.com/sigmorphon/2022SegmentationST#)
 
 Please join our [Google Group](https://groups.google.com/forum/#!forum/sigmorphon-morpheme-segmentation/join) to stay up to date.
-
 Click here to [register for the task](https://forms.gle/J3vsp11n338XbpYD6)!
+
+Training and development datasets are released at https://github.com/sigmorphon/2022SegmentationST/tree/v0.1
 
 Please open the issues if you have any questions.
 
