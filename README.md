@@ -111,7 +111,7 @@ We will provide python evaluation scripts, reporting the following evaluation me
 
 - February 23, 2022: Training splits for development languages are released at https://github.com/sigmorphon/2022SegmentationST/tree/v0.1
 - February 28, 2022: Development splits for development languages are released at https://github.com/sigmorphon/2022SegmentationST/tree/v0.1
-- ~~March 5~~ March 8, 2022: Baseline code, and results released.
+- ~~March 5~~ March 12, 2022: Baseline code, and results released.
 
 ### Generalization Phase
 
