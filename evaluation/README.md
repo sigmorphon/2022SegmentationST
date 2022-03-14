@@ -1,4 +1,4 @@
-The official evaluation script lives in this directory. We have provided sample output from the baseline model on the development data in ../baseline/. You may run the baseline as shown in the examples below.
+The official evaluation script lives in this directory. We have provided sample output from the baseline model on the development data in ../baseline/. You may run the baseline as shown in the examples below. For the baseline, we use the pretrained `BertTokenizer` models from [huggingface](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizer). 
 
 Word-level Task Evaluation:
 
