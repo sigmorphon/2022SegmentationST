@@ -2,8 +2,11 @@ The official evaluation script lives in this directory. We have provided sample 
 
 Word-level Task Evaluation:
 
+``
 python evaluate.py --guess ../baseline/eng.word.dev.bert.tsv --gold ../data/eng.word.dev.tsv --category
+``
 
+```
 category:       101
 levenshtein:    1.56
 precision:      51.59
@@ -57,3 +60,4 @@ levenshtein:    2.72
 precision:      20.86
 recall: 28.28
 f-measure:      24.01
+```
