@@ -96,8 +96,6 @@ Development languages are:
 | English   | 11007 | 1783 | 1846 |
 | Mongolian | 1000  | 500  | 500  |
 
-## Task Details
-
 ## Evaluation
 
 We will provide python evaluation scripts, reporting the following evaluation measures:
