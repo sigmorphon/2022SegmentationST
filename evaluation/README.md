@@ -3,7 +3,7 @@ The official evaluation script lives in this directory. We have provided sample 
 Word-level Task Evaluation:
 
 ``
-python evaluate.py --guess ../baseline/eng.word.dev.bert.tsv --gold ../data/eng.word.dev.tsv --category
+python evaluate_word.py --guess ../baseline/eng.word.dev.bert.tsv --gold ../data/eng.word.dev.tsv --category
 ``
 
 ```
