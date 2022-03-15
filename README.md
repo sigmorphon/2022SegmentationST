@@ -70,7 +70,7 @@ For some of the development languages, we are providing the word categories so t
 
 ### Baseline results
 
-The following table shows the results of pretrained `BertTokenizer` on English. This pretrained model was taken from HuggingFace. 
+The following table shows the word-level task results of pretrained `BertTokenizer` on English. This pretrained model was taken from [HuggingFace](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizer). 
 
 | word class | inflection | derivation | compound | R     | P     | F1    | lev. distance |
 |------------|------------|------------|----------|-------|-------|-------|---------------|
@@ -148,8 +148,8 @@ We will provide python evaluation scripts, reporting the following evaluation me
 
 - Khuyagbaatar Batsuren (National University of Mongolia)
 - Gábor Bella (University of Trento)
-- Viktor Martinović (University of Vienna)
 - Aryaman Arora (Georgetown University)
+- Viktor Martinović (University of Vienna)
 - Kyle Gorman (Graduate center, City University Of New York)
 - Zdeněk Žabokrtský (Charles University)
 - Amarsanaa Ganbold (National University of Mongolia)
