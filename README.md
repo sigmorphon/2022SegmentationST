@@ -68,7 +68,9 @@ For some of the development languages, we are providing the word categories so t
 | 001        | Compound only                    | hotpot ==> hot @@pot                   |
 | 111        | Inflection, Derivation, Compound | trackworkers ==> track @@work @@er @@s |
 
-### Baseline - pretrained BertTokenizer
+### Baseline results
+
+The following table shows the results of pretrained `BertTokenizer` on English. This pretrained model was taken from HuggingFace. 
 
 | word class | inflection | derivation | compound | R     | P     | F1    | lev. distance |
 |------------|------------|------------|----------|-------|-------|-------|---------------|
@@ -80,8 +82,8 @@ For some of the development languages, we are providing the word categories so t
 | 111        | yes        | yes        | yes      | 27.45 | 34.86 | 30.71 | 3.28          |
 | 110        | yes        | yes        | no       | 26.21 | 24.95 | 25.56 | 3.31          |
 | 011        | no         | yes        | yes      | 27.16 | 32.77 | 29.7  | 3.35          |
-|------------|------------|------------|----------|-------|-------|-------|---------------|
 | total      | -          | -          | -        | 28.28 | 20.86 | 24.01 | 2.72          |
+
 
 ## Part 2: Sentence-level Morpheme Segmentation
 At the sentence level, participating systems are expected to predict a sequence of morphemes for a given sentence.
