@@ -68,6 +68,21 @@ For some of the development languages, we are providing the word categories so t
 | 001        | Compound only                    | hotpot ==> hot @@pot                   |
 | 111        | Inflection, Derivation, Compound | trackworkers ==> track @@work @@er @@s |
 
+### Baseline - pretrained BertTokenizer
+
+| word class | inflection | derivation | compound | R     | P     | F1    | lev. distance |
+|------------|------------|------------|----------|-------|-------|-------|---------------|
+| 101        | yes        | no         | yes      | 48.8  | 51.59 | 50.16 | 1.56          |
+| 001        | no         | no         | yes      | 49.5  | 43.76 | 46.45 | 1.66          |
+| 000        | no         | no         | no       | 6.63  | 2.42  | 3.55  | 2.16          |
+| 010        | no         | yes        | no       | 33.91 | 25.31 | 28.99 | 2.76          |
+| 100        | yes        | no         | no       | 19.58 | 12.49 | 15.25 | 2.79          |
+| 111        | yes        | yes        | yes      | 27.45 | 34.86 | 30.71 | 3.28          |
+| 110        | yes        | yes        | no       | 26.21 | 24.95 | 25.56 | 3.31          |
+| 011        | no         | yes        | yes      | 27.16 | 32.77 | 29.7  | 3.35          |
+|------------|------------|------------|----------|-------|-------|-------|---------------|
+| total      | -          | -          | -        | 28.28 | 20.86 | 24.01 | 2.72          |
+
 ## Part 2: Sentence-level Morpheme Segmentation
 At the sentence level, participating systems are expected to predict a sequence of morphemes for a given sentence.
 The following shows two lines of English data:
@@ -100,7 +115,9 @@ Development languages are:
 
 We will provide python evaluation scripts, reporting the following evaluation measures:
 
-- Accuracy - fraction of correctly predicted morphemes.
+- Precision - fraction of correctly predicted morphemes on all predicted morphemes
+- Recall - ratio of correctly predicted morphemes on all gold morphemes 
+- F-measure - the harmonic mean of the precision and recall
 - Edit distance - average Levenshtein distance between the predicted output and the gold instance.
 
 ## Timeline
