@@ -70,7 +70,7 @@ For some of the development languages, we are providing the word categories so t
 
 ### Baseline results
 
-The following table shows the word-level task results of pretrained `BertTokenizer` on English. This pretrained model was taken from [HuggingFace](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizer). 
+The following table shows the word-level task results of pretrained `BertTokenizer` on English. This pretrained model was employed from [HuggingFace](https://huggingface.co/docs/transformers/main_classes/tokenizer#transformers.PreTrainedTokenizer). 
 
 | word class | inflection | derivation | compound |   R   |   P   |   F1  | lev. distance |
 |:----------:|:----------:|:----------:|:--------:|:-----:|:-----:|:-----:|:-------------:|
