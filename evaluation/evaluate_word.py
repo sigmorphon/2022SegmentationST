@@ -102,7 +102,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='SIGMORPHON 2022 Morpheme Segmentation Shared Task Evaluation')
     parser.add_argument("--gold", help="Gold standard", required=True, type=str)
     parser.add_argument("--guess", help="Model output", required=True, type=str)
-    parser.add_argument("--category", help="Morphological category", default=False,  action=argparse.BooleanOptionalAction)
+    parser.add_argument("--category", help="Morphological category", action="store_true")
     args = parser.parse_args()    
 
     D_gold, D_cat = read(args.gold, args.category)
