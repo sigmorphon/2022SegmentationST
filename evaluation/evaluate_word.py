@@ -2,12 +2,11 @@
 """
 Official Evaluation Script for the SIGMORPHON 2022 Morpheme Segmentation Shared Task.
 Returns precision, recall, f-measure, and mean Levenhstein distance.
-Author: Khuyagbaatar Batsuren
-Last Update: 03/14/2022
 """
 
 from collections import defaultdict
 import numpy as np
+
 
 def distance(str1, str2):
     """Simple Levenshtein implementation for evalm."""
@@ -26,10 +25,11 @@ def distance(str1, str2):
     return m[len(str2), len(str1)]
 
 
-def print_numbers(precision, recall, distance, f_measure, cat="all"):
-    print("\ncategory:\t" + cat)
-    print("levenshtein:\t" + str(distance) + "\nprecision:\t" + str(precision))
-    print("recall:\t" + str(recall) + "\nf-measure:\t" + str(f_measure))
+def print_numbers(stats_dict, cat="all"):
+    print("\n")
+    print("category:", cat)
+    for stat_name, stat in sorted(stats_dict.items()):
+        print("\t".join([stat_name, "{:.2f}".format(stat)]))
 
 
 def read_tsv(path, category):
@@ -72,12 +72,11 @@ def stratify(sequence, labels):
 
 def main(args):
     gold_data = read_tsv(args.gold, args.category)
-    guess_data = read_tsv(args.guess, False)  # you only need the "segments" column
+    guess_data = read_tsv(args.guess, False)  # only second column is needed
+    assert len(gold_data["segments"]) == len(guess_data["segments"]), \
+        "gold and guess tsvs do not have the same number of entries"
 
-    # todo: make sure the data is well-formed
-
-    # levenshtein distance can be computed separately for each (gold, guess)
-    # pair
+    # levenshtein distance can be computed separately for each pair
     dists = [distance(gold, guess)
              for gold, guess
              in zip(gold_data["segments"], guess_data["segments"])]
@@ -88,8 +87,6 @@ def main(args):
                   in zip(gold_data["segments"], guess_data["segments"])]
     gold_lens = [len(gold.split("|")) for gold in gold_data["segments"]]
     pred_lens = [len(guess.split("|")) for guess in guess_data["segments"]]
-    overall_stats = compute_stats(dists, n_overlaps, gold_lens, pred_lens)
-    print_numbers(**overall_stats)
 
     if args.category:
         categories = gold_data["category"]
@@ -106,7 +103,10 @@ def main(args):
                 gold_lens_by_cat[cat],
                 pred_lens_by_cat[cat]
             )
-            print_numbers(**cat_stats, cat=cat)
+            print_numbers(cat_stats, cat=cat)
+
+    overall_stats = compute_stats(dists, n_overlaps, gold_lens, pred_lens)
+    print_numbers(overall_stats)
 
 
 if __name__ == "__main__":
