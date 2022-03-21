@@ -6,8 +6,8 @@ Author: Khuyagbaatar Batsuren
 Last Update: 03/14/2022
 """
 
+from collections import defaultdict
 import numpy as np
-import codecs
 
 def distance(str1, str2):
     """Simple Levenshtein implementation for evalm."""
@@ -25,76 +25,88 @@ def distance(str1, str2):
             m[x, y] = min(m[x - 1, y] + 1, m[x, y - 1] + 1, m[x - 1, y - 1] + dg)
     return m[len(str2), len(str1)]
 
-def read(fname, flag):
-    """ read file name """
-    D = {}
-    C = {}
-    with codecs.open(fname, 'rb', encoding='utf-8') as f:
+
+def print_numbers(precision, recall, distance, f_measure, cat="all"):
+    print("\ncategory:\t" + cat)
+    print("levenshtein:\t" + str(distance) + "\nprecision:\t" + str(precision))
+    print("recall:\t" + str(recall) + "\nf-measure:\t" + str(f_measure))
+
+
+def read_tsv(path, category):
+    # tsv without header
+    col_names = ["word", "segments"]
+    if category:
+        col_names.append("category")
+    data = {name: [] for name in col_names}
+    with open(path) as f:
         for line in f:
-            line = line.strip()
-            if flag:
-              lemma, segments, tag = line.split("\t")
-              C[lemma] = tag
-            else:
-              lemma, segments = line.split("\t")[0:2]
-            D[lemma] = segments.replace(' @@','|')
-    return D, C
+            fields = line.strip().split("\t")
+            for name, field in zip(col_names, fields):
+                if name == "segments":
+                    field = field.replace(' @@', '|')
+                data[name].append(field)
+    return data
 
-def printNumbers(T):
-  answers, D_cat = T[0], T[1]
-  cat_set = set(D_cat)
-  for cat in cat_set:
-    print("\ncategory:\t" +cat)
-    print ("levenshtein:\t"+str(answers[cat]['distance'])+"\nprecision:\t"+str(answers[cat]['precision']))
-    print ("recall:\t"+str(answers[cat]['recall'])+"\nf-measure:\t"+str(answers[cat]['fmeasure']))
 
-def eval_form(gold, guess, category):
-    """ compute average accuracy and edit distance for word-level task """
-    correct, dist, total = {}, {}, {}
-    tp, fp, total_m, total_g = {}, {}, {}, {}
-    answers = {}
-    if len(category) < 1:
-      category['']='all'
-    for cat in category.values():
-      tp[cat] = .0
-      dist[cat] = .0
-      total_m[cat] = .0
-      total_g[cat] = .0
-      total[cat] = .0
-    for lemma, str1 in gold.items():
-      str2 = u"" # empty string if no guess
-      cat = "all"
-      if lemma in category:
-        cat = category[lemma]
-      if (cat in total) is False:
-        total[cat] = .0
-      if lemma in guess:
-        str2 = guess[lemma]
-        gold_set = set(str1.split('|'))
-        guess_list = str2.split('|')
-        if (cat in total_g) is False:
-          total_g[cat] = .0
-        if (cat in total_m) is False:
-          total_m[cat] = .0
-        total_g[cat] += len(str2.split('|'))
-        total_m[cat] += len(str1.split('|'))
-        
-      for b in guess_list:
-          if b in gold_set:
-            if (cat in tp) is False:
-              tp[cat]=.0
-            tp[cat] += 1
-      dist[cat] += distance(str1, str2)
-      total[cat] += 1
+def n_correct(gold_segments, guess_segments):
+    gold_seg_set = set(gold_segments.split("|"))
+    return sum(guess_seg in gold_seg_set for guess_seg in guess_segments.split("|"))
 
-    for cat in total.keys():
-      answers[cat] = {}
-      answers[cat]['distance'] =round(dist[cat]/total[cat],2)
-      answers[cat]['precision'] = round((tp[cat]/total_g[cat])*100,2)
-      answers[cat]['recall'] = round((tp[cat]/total_m[cat])*100,2)
-      answers[cat]['fmeasure'] = round((2*answers[cat]['precision']*answers[cat]['recall']) / (answers[cat]['precision']+answers[cat]['recall']),2)
-    return (answers, total.keys())
 
+def compute_stats(dists, overlaps, gold_lens, pred_lens):
+    mean_dist = sum(dists) / len(dists)
+    total_overlaps = sum(overlaps)
+    precision = 100 * total_overlaps / sum(pred_lens)
+    recall = 100 * total_overlaps / sum(gold_lens)
+    f_measure = 2 * precision * recall / (precision + recall)
+    return {"distance": mean_dist, "precision": precision, "recall": recall, "f_measure": f_measure}
+
+
+def stratify(sequence, labels):
+    assert len(sequence) == len(labels)
+    by_label = defaultdict(list)
+    for label, value in zip(labels, sequence):
+        by_label[label].append(value)
+    return by_label
+
+
+def main(args):
+    gold_data = read_tsv(args.gold, args.category)
+    guess_data = read_tsv(args.guess, False)  # you only need the "segments" column
+
+    # todo: make sure the data is well-formed
+
+    # levenshtein distance can be computed separately for each (gold, guess)
+    # pair
+    dists = [distance(gold, guess)
+             for gold, guess
+             in zip(gold_data["segments"], guess_data["segments"])]
+
+    # the values needed for P/R can also be broken down per-example
+    n_overlaps = [n_correct(gold, guess)
+                  for gold, guess
+                  in zip(gold_data["segments"], guess_data["segments"])]
+    gold_lens = [len(gold.split("|")) for gold in gold_data["segments"]]
+    pred_lens = [len(guess.split("|")) for guess in guess_data["segments"]]
+    overall_stats = compute_stats(dists, n_overlaps, gold_lens, pred_lens)
+    print_numbers(**overall_stats)
+
+    if args.category:
+        categories = gold_data["category"]
+        # stratify by category
+        dists_by_cat = stratify(dists, categories)
+        overlaps_by_cat = stratify(n_overlaps, categories)
+        gold_lens_by_cat = stratify(gold_lens, categories)
+        pred_lens_by_cat = stratify(pred_lens, categories)
+
+        for cat in sorted(dists_by_cat):
+            cat_stats = compute_stats(
+                dists_by_cat[cat],
+                overlaps_by_cat[cat],
+                gold_lens_by_cat[cat],
+                pred_lens_by_cat[cat]
+            )
+            print_numbers(**cat_stats, cat=cat)
 
 
 if __name__ == "__main__":
@@ -103,10 +115,5 @@ if __name__ == "__main__":
     parser.add_argument("--gold", help="Gold standard", required=True, type=str)
     parser.add_argument("--guess", help="Model output", required=True, type=str)
     parser.add_argument("--category", help="Morphological category", action="store_true")
-    args = parser.parse_args()    
-
-    D_gold, D_cat = read(args.gold, args.category)
-    D_guess = read(args.guess, False)[0]
-    if args.category:
-      printNumbers(eval_form(D_gold, D_guess,D_cat))
-    printNumbers(eval_form(D_gold, D_guess,{}))
+    opt = parser.parse_args()
+    main(opt)
