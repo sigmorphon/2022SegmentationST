@@ -44,6 +44,7 @@ def read_tsv(path, category):
             for name, field in zip(col_names, fields):
                 if name == "segments":
                     field = field.replace(' @@', '|')
+                    field = field.replace(' ', '|')
                 data[name].append(field)
     return data
 
