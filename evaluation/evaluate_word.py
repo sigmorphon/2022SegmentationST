@@ -40,7 +40,7 @@ def read_tsv(path, category):
     data = {name: [] for name in col_names}
     with open(path) as f:
         for line in f:
-            fields = line.strip().split("\t")
+            fields = line.rstrip("\n").split("\t")
             for name, field in zip(col_names, fields):
                 if name == "segments":
                     field = field.replace(' @@', '|')
