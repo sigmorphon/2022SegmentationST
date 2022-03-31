@@ -38,7 +38,7 @@ def read_tsv(path, category):
     if category:
         col_names.append("category")
     data = {name: [] for name in col_names}
-    with open(path) as f:
+    with open(path, encoding='utf-8') as f:
         for line in f:
             fields = line.rstrip("\n").split("\t")
             for name, field in zip(col_names, fields):
