@@ -61,3 +61,17 @@ precision:      20.86
 recall: 28.28
 f-measure:      24.01
 ```
+
+Sentence-level Task Evaluation:
+
+``
+python evaluate.py --guess ../baseline/eng.sentence.dev.bert.tsv --gold ../data/eng.sentence.dev.tsv
+``
+
+```
+category: all
+distance        5.84
+f_measure       64.65
+precision       64.06
+recall  65.24
+```
