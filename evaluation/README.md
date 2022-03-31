@@ -75,3 +75,22 @@ f_measure       64.65
 precision       64.06
 recall  65.24
 ```
+
+```
+python evaluate_word.py --guess ../baseline/mon.sentence.dev.bert.tsv --gold ../data/mon.sentence.dev.tsv
+
+category: all
+distance        29.34
+f_measure       27.25
+precision       22.79
+recall  33.87
+
+evaluate_word.py --guess ../baseline/ces.sentence.dev.bert.tsv --gold ../data/ces.sentence.dev.tsv
+
+
+category: all
+distance        21.01
+f_measure       36.07
+precision       39.88
+recall  32.93
+```
