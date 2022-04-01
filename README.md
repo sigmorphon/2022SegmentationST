@@ -112,6 +112,13 @@ Development languages are:
 | English   | 11007 | 1783 | 1846 |
 | Mongolian | 1000  | 500  | 500  |
 
+### Baseline results
+|           | Precison | Recall | F-measure | Lev. distance |
+|-----------|:--------:|:------:|:---------:|:-------------:|
+| Czech     |   36.36  |  30.02 |   32.89   |     21.01     |
+| English   |   63.05  |  64.37 |    63.7   |      5.81     |
+| Mongolian |   19.58  |  29.33 |   23.49   |     28.88     |
+
 ## Evaluation
 
 We will provide python evaluation scripts, reporting the following evaluation measures:
