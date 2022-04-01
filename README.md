@@ -116,7 +116,7 @@ Development languages are:
 |           | Precison | Recall | F-measure | Lev. distance |
 |-----------|:--------:|:------:|:---------:|:-------------:|
 | Czech     |   36.36  |  30.02 |   32.89   |     21.01     |
-| English   |   63.05  |  64.37 |    63.7   |      5.81     |
+| English   |   63.05  |  64.37 |   63.70   |      5.81     |
 | Mongolian |   19.58  |  29.33 |   23.49   |     28.88     |
 
 ## Evaluation
