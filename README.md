@@ -88,13 +88,13 @@ The following table shows the word-level task results of pretrained `BertTokeniz
 At the sentence level, participating systems are expected to predict a sequence of morphemes for a given sentence.
 The following shows two lines of English data:
 
-    Six weeks of basic training. Six week @@s of base @@ic train @@ing .
-    Fistfights, please. Fist @@fight @@s , please .
+    Six weeks of basic training . Six week @@s of base @@ic train @@ing .
+    Fistfights , please . Fist @@fight @@s , please .
 
 The following shows two lines of Mongolian data:
 
-    Гэрт эмээ хоол хийв. Гэр @@т эмээ хоол хийх @@в .
-    Би өдөр эмээ уусан. Би өдөр эм @@ээ уух @@сан .
+    Гэрт эмээ хоол хийв . Гэр @@т эмээ хоол хийх @@в .
+    Би өдөр эмээ уусан . Би өдөр эм @@ээ уух @@сан .
 
 In above example, `эмээ` is a hononym of two different words, first means a `grandmother` and second is `medicine`. Depending on the context, the second homonym word is inflectional form of `medicine` and it is segmentable.
 
