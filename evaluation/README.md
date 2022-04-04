@@ -3,7 +3,7 @@ The official evaluation script lives in this directory. We have provided sample 
 Word-level Task Evaluation:
 
 ``
-python evaluate.py --level word --guess ../baseline/eng.word.dev.bert.tsv --gold ../data/eng.word.dev.tsv --category
+python evaluate.py --guess ../baseline/eng.word.dev.bert.tsv --gold ../data/eng.word.dev.tsv --category
 ``
 
 ```
@@ -79,26 +79,32 @@ python evaluate.py --level sentence --guess ../baseline/eng.sentence.dev.bert.ts
 ```
 category: all
 distance        5.81
-f_measure       63.70
-precision       63.05
-recall  64.37
+f_measure       63.73
+precision       63.08
+recall  64.39
 ```
 
 ```
-python evaluate_word.py --level sentence --guess ../baseline/mon.sentence.dev.bert.tsv --gold ../data/mon.sentence.dev.tsv
+python evaluate.py --guess ../baseline/mon.sentence.dev.bert.tsv --gold ../data/mon.sentence.dev.tsv
+```
 
+```
 category: all
-distance        28.88
-f_measure       23.49
-precision       19.58
-recall  29.33
+distance        28.86
+f_measure       23.99
+precision       20.00
+recall  29.95
+```
 
-evaluate_word.py --level sentence --guess ../baseline/ces.sentence.dev.bert.tsv --gold ../data/ces.sentence.dev.tsv
+```
+python evaluate.py --guess ../baseline/ces.sentence.dev.bert.tsv --gold ../data/ces.sentence.dev.tsv
+```
 
-
+```
 category: all
 distance        21.01
-f_measure       32.89
-precision       36.36
-recall  30.02
+f_measure       33.25
+precision       36.76
+recall  30.35
+
 ```
