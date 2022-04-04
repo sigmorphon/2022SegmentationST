@@ -73,7 +73,7 @@ recall  28.79
 Sentence-level Task Evaluation:
 
 ``
-python evaluate.py --level sentence --guess ../baseline/eng.sentence.dev.bert.tsv --gold ../data/eng.sentence.dev.tsv
+python evaluate.py --guess ../baseline/eng.sentence.dev.bert.tsv --gold ../data/eng.sentence.dev.tsv
 ``
 
 ```
