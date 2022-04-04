@@ -109,8 +109,7 @@ def main(args):
                 dists_by_cat[cat],
                 overlaps_by_cat[cat],
                 gold_lens_by_cat[cat],
-                pred_lens_by_cat[cat],
-                len(dists_by_cat[cat])
+                pred_lens_by_cat[cat]
             )
             print_numbers(cat_stats, cat=cat)
 
