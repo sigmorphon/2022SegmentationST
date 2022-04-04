@@ -113,11 +113,11 @@ Development languages are:
 | Mongolian | 1000  | 500  | 500  |
 
 ### Baseline results
-|           | Precison | Recall | F-measure | Lev. distance |
+| Language  | Precison | Recall | F-measure | Lev. distance |
 |-----------|:--------:|:------:|:---------:|:-------------:|
-| Czech     |   36.36  |  30.02 |   32.89   |     21.01     |
-| English   |   63.05  |  64.37 |   63.70   |      5.81     |
-| Mongolian |   19.58  |  29.33 |   23.49   |     28.88     |
+| Czech     |   36.76  |  30.35 |   33.25   |     21.01     |
+| English   |   63.08  |  64.39 |   63.73   |      5.81     |
+| Mongolian |   20.00  |  29.95 |   23.99   |     28.86     |
 
 ## Evaluation
 
