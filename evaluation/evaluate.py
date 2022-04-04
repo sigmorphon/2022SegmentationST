@@ -32,33 +32,22 @@ def print_numbers(stats_dict, cat="all"):
         print("\t".join([stat_name, "{:.2f}".format(stat)]))
 
 
-def read_tsv(path, level, category):
+def read_tsv(path, category):
     # tsv without header
     col_names = ["word", "segments"]
     if category:
         col_names.append("category")
     data = {name: [] for name in col_names}
-    first = True
-    n = 0
     with open(path, encoding='utf-8') as f:
         for line in f:
-            n+=1
             fields = line.rstrip("\n").split("\t")
             for name, field in zip(col_names, fields):
-                if level == 'word':
-                    if name == "segments":
-                        field = field.replace(' @@', '|')
-                        field = field.replace(' ', '|')
-                    data[name].append(field)
-                else:
-                    if name == "segments":
-                        field = field.replace(' @@', '|')
-                    data[name].extend(field.split(' '))
-            if first == True:
-                if len(data['word']) != len(data['segments']):
-                    print(line)
-                    first = False
-    return data, n
+                if name == "segments":
+                    field = field.replace(' @@', '|')
+                    field = field.replace(' ', '|')
+                data[name].append(field)
+    return data
+
 
 def n_correct(gold_segments, guess_segments):
     a = gold_segments.split("|")
@@ -71,8 +60,9 @@ def n_correct(gold_segments, guess_segments):
                 max(table[i][j - 1], table[i - 1][j]))
     return table[-1][-1]
 
-def compute_stats(dists, overlaps, gold_lens, pred_lens, n):
-    mean_dist = sum(dists) / n
+
+def compute_stats(dists, overlaps, gold_lens, pred_lens):
+    mean_dist = sum(dists) / len(dists)
     total_overlaps = sum(overlaps)
     precision = 100 * total_overlaps / sum(pred_lens)
     recall = 100 * total_overlaps / sum(gold_lens)
@@ -89,8 +79,8 @@ def stratify(sequence, labels):
 
 
 def main(args):
-    gold_data = read_tsv(args.gold, args.level, args.category)[0]
-    guess_data , n = read_tsv(args.guess, args.level, False)  # only second column is needed
+    gold_data = read_tsv(args.gold, args.category)
+    guess_data = read_tsv(args.guess, False)  # only second column is needed
     assert len(gold_data["segments"]) == len(guess_data["segments"]), \
         "gold and guess tsvs do not have the same number of entries"
 
@@ -124,7 +114,7 @@ def main(args):
             )
             print_numbers(cat_stats, cat=cat)
 
-    overall_stats = compute_stats(dists, n_overlaps, gold_lens, pred_lens, n)
+    overall_stats = compute_stats(dists, n_overlaps, gold_lens, pred_lens)
     print_numbers(overall_stats)
 
 
@@ -133,7 +123,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='SIGMORPHON 2022 Morpheme Segmentation Shared Task Evaluation')
     parser.add_argument("--gold", help="Gold standard", required=True, type=str)
     parser.add_argument("--guess", help="Model output", required=True, type=str)
-    parser.add_argument("--level", help="Task level: word or sentence", required=True, choices=['word', 'sentence'], type = str)
     parser.add_argument("--category", help="Morphological category", action="store_true")
     opt = parser.parse_args()
     main(opt)
