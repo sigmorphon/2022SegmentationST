@@ -140,17 +140,17 @@ We will provide python evaluation scripts, reporting the following evaluation me
 
 ### Generalization Phase
 
-- April 8, 2022: Training and development splits for surprise languages released.
+- ~~April 8~~ April 18, 2022: Training and development splits for surprise languages released.
 
 ### Evaluation Phase
 
-- April 15, 2022: Test splits for development and surprise languages are released.
-- April 29, 2022: Participants' submissions due.
+- ~~April 15~~ April 29, 2022: Test splits for development and surprise languages are released.
+- ~~April 29~~ May 13, 2022: Participants' submissions due.
 
 ### Write-up Phase
 
-- May 13, 2022: Participants' draft system description papers due.
-- May 20, 2022: Participants' camera-ready system description papers due.
+- ~~May 13~~ May 27, 2022: Participants' draft system description papers due.
+- ~~May 20~~ June 3, 2022: Participants' camera-ready system description papers due.
 
 ## Organizers
 
