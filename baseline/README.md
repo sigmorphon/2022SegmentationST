@@ -1,6 +1,6 @@
-#Baseline results
+# Baseline results
 
-##Word-level task
+## Word-level task
 
 | # | Language  | precision | recall | f-measure | lev. distance        |
 |:-:|-----------|:---------:|:------:|:---------:|:--------------------:|
