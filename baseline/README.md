@@ -15,7 +15,7 @@
 
 ### Categorical details by language
 
-Russian
+Russian - Multilingual BERT Tokenizer (cased)
 
 | category | inflection | derivation | compound | precision | recall | f_measure | distance |
 |:--------:|:----------:|:----------:|:--------:|:---------:|:------:|:---------:|:--------:|
@@ -29,7 +29,7 @@ Russian
 |    111   |     yes    |     yes    |    yes   |    7.70   |  7.63  |    7.66   |   9.61   |
 |    all   |      -     |      -     |     -    |   13.23   |  14.13 |   13.67   |   7.62   |
 
-Italian
+Italian - Multilingual BERT Tokenizer (cased)
 
 | category | inflection | derivation | compound | precision | recall | f_measure | distance |
 |:--------:|:----------:|:----------:|:--------:|:---------:|:------:|:---------:|:--------:|
@@ -43,7 +43,7 @@ Italian
 |    111   |     yes    |     yes    |    yes   |   11.11   |  10.64 |   10.87   |   7.09   |
 |    all   |      -     |      -     |     -    |    8.12   |  10.54 |    9.18   |   5.35   |
 
-Hungarian
+Hungarian - Multilingual BERT Tokenizer (cased)
 
 | category | inflection | derivation | compound | precision | recall | f_measure | distance |
 |:--------:|:----------:|:----------:|:--------:|:---------:|:------:|:---------:|:--------:|
@@ -57,7 +57,7 @@ Hungarian
 |    111   |     yes    |     yes    |    yes   |   23.93   |  27.89 |   25.76   |   4.66   |
 |    all   |      -     |      -     |     -    |   20.88   |  27.81 |   23.85   |   3.54   |
 
-French
+French - Multilingual BERT Tokenizer (cased)
 
 | category | inflection | derivation | compound | precision | recall | f_measure | distance |
 |:--------:|:----------:|:----------:|:--------:|:---------:|:------:|:---------:|:--------:|
@@ -70,4 +70,35 @@ French
 |    110   |     yes    |     yes    |    no    |   14.15   |  14.32 |   14.23   |   5.30   |
 |    111   |     yes    |     yes    |    yes   |    6.67   |  5.68  |    6.13   |   8.37   |
 |    all   |      -     |      -     |     -    |   11.08   |  14.00 |   12.37   |   4.32   |
+
+Spanish - Multilingual BERT Tokenizer (cased)
+
+| category | inflection | derivation | compound | precision | recall | f_measure | distance |
+|:--------:|:----------:|:----------:|:--------:|:---------:|:------:|:---------:|:--------:|
+|    000   |     no     |     no     |    no    |    5.19   |  12.82 |    7.39   |   1.47   |
+|    001   |     no     |     no     |    yes   |    9.89   |  15.52 |   12.08   |   2.76   |
+|    010   |     no     |     yes    |    no    |   16.02   |  21.29 |   18.28   |   3.37   |
+|    011   |     no     |     yes    |    yes   |    5.26   |  5.26  |    5.26   |   4.83   |
+|    100   |     yes    |     no     |    no    |   11.52   |  15.79 |   13.32   |   4.62   |
+|    101   |     yes    |     no     |    yes   |   10.57   |  11.82 |   11.16   |   5.59   |
+|    110   |     yes    |     yes    |    no    |   20.21   |  19.29 |   19.74   |   6.11   |
+|    111   |     yes    |     yes    |    yes   |   28.92   |  28.57 |   28.74   |     7    |
+|    all   |      -     |      -     |     -    |   15.76   |  17.91 |   16.76   |    5.2   |
+
+English - BERT Tokenizer (uncased)
+
+| category | inflection | derivation | compound | precision | recall | f_measure | distance |
+|:--------:|:----------:|:----------:|:--------:|:---------:|:------:|:---------:|:--------:|
+|    000   |     no     |     no     |    no    |    2.02   |  5.55  |    2.96   |   2.11   |
+|    001   |     no     |     no     |    yes   |   46.60   |  64.11 |   53.97   |   1.42   |
+|    010   |     no     |     yes    |    no    |   25.29   |  33.90 |   28.97   |   2.75   |
+|    011   |     no     |     yes    |    yes   |   36.85   |  38.93 |   37.86   |   2.96   |
+|    100   |     yes    |     no     |    no    |   12.16   |  19.14 |   14.87   |   2.73   |
+|    101   |     yes    |     no     |    yes   |   51.57   |  50.12 |   50.83   |   1.51   |
+|    110   |     yes    |     yes    |    no    |   24.92   |  26.17 |   25.53   |   3.31   |
+|    111   |     yes    |     yes    |    yes   |   34.81   |  28.30 |   31.22   |   3.22   |
+|    all   |      -     |      -     |     -    |   20.99   |  28.79 |   24.28   |   2.69   |
+
+## Sentence-level task
+
 
