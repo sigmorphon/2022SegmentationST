@@ -99,6 +99,20 @@ English - BERT Tokenizer (uncased)
 |    111   |     yes    |     yes    |    yes   |   34.81   |  28.30 |   31.22   |   3.22   |
 |    all   |      -     |      -     |     -    |   20.99   |  28.79 |   24.28   |   2.69   |
 
+Mongolian - BERT Tokenizer (uncased)
+
+| category | inflection | derivation | compound | precision | recall | f_measure | distance |
+|:--------:|:----------:|:----------:|:--------:|:---------:|:------:|:---------:|:--------:|
+|    000   |     no     |     no     |    no    |    1.26   |  3.75  |    1.89   |   2.14   |
+|    001   |     no     |     no     |    yes   |    -      |  -     |    -      |   -      |
+|    010   |     no     |     yes    |    no    |    4.86   |  9.62  |    6.46   |   4.45   |
+|    011   |     no     |     yes    |    yes   |    -      |  -     |    -      |   -      |
+|    100   |     yes    |     no     |    no    |    6.22   | 12.52  |    8.31   |   3.50   |
+|    101   |     yes    |     no     |    yes   |    0.00   |  0.00  |    0.00   |   5.33   |
+|    110   |     yes    |     yes    |    no    |    6.45   | 10.18  |    7.90   |   5.94   |
+|    111   |     yes    |     yes    |    yes   |    -      |  -     |    -      |   -      |
+|    all   |      -     |      -     |     -    |    5.89   | 10.59  |    7.57   |   4.51   |
+
 ## Sentence-level task
 
 | Language  | Precison | Recall | F-measure | Lev. distance |
