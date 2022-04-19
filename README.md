@@ -2,8 +2,7 @@
 
 Morphemes (prefixes, suffixes, root words) are linguistic descriptions, defined as the smallest meaningful unit of words. Our proposed shared task is morpheme
 segmentation that converts a text into a sequence of morphemes. In order to prepare a dataset for this task, we integrated all basic types of morphological
-databases (including UniMorph (Kirov et al., 2018b; McCarthy et al., 2020) – inflectional morphology; MorphyNet (Batsuren et al., 2021) – derivational morphology; Universal
-Dependencies (Nivre et al., 2017) and ten editions of Wiktionary – compound morphology and root words). In the future, we expect the NLP community will
+databases (including [UniMorph](https://github.com/unimorph) (Kirov et al., 2018b; McCarthy et al., 2020) – inflectional morphology; [MorphyNet](https://github.com/kbatsuren/MorphyNet) (Batsuren et al., 2021) – derivational morphology; Universal Dependencies (Nivre et al., 2017) and ten editions of Wiktionary – compound morphology and root words). In the future, we expect the NLP community will
 benefit a lot by innovating subword-based tokenization with this task. This shared task has two parts:
 
 + ***Part 1***: [Word-level morpheme segmentation](https://github.com/sigmorphon/2022SegmentationST#)
