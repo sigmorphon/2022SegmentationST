@@ -66,7 +66,10 @@ def compute_stats(dists, overlaps, gold_lens, pred_lens):
     total_overlaps = sum(overlaps)
     precision = 100 * total_overlaps / sum(pred_lens)
     recall = 100 * total_overlaps / sum(gold_lens)
-    f_measure = 2 * precision * recall / (precision + recall)
+    if precision+recall == 0:
+        f_measure = .0
+    else:
+        f_measure = 2 * precision * recall / (precision + recall)
     return {"distance": mean_dist, "precision": precision, "recall": recall, "f_measure": f_measure}
 
 
