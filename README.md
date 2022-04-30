@@ -113,7 +113,7 @@ Development languages are:
 |-----------|-------|------|------|
 | Czech     | 1000  | 500  | 500  |
 | English   | 11007 | 1783 | 1846 |
-| Mongolian | 1000  | 500  | 500  |
+| Mongolian | 1000  | 500  | 600  |
 
 ### Baseline results
 | Language  | Precison | Recall | F-measure | Lev. distance |
