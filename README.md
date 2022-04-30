@@ -143,11 +143,11 @@ We will provide python evaluation scripts, reporting the following evaluation me
 
 ### Generalization Phase
 
-- ~~April 8~~ April 18, 2022: Training and development splits for surprise languages released.
+- ~~April 8~~ April 18, 2022: Training and development splits for surprise languages released [`/data/surprise`](https://github.com/sigmorphon/2022SegmentationST/tree/main/data/surprise)
 
 ### Evaluation Phase
 
-- ~~April 15~~ April 29, 2022: Test splits for development and surprise languages are released.
+- ~~April 15~~ April 29, 2022: Test splits for development and surprise languages are released at [`/data`](https://github.com/sigmorphon/2022SegmentationST/tree/main/data)
 - ~~April 29~~ May 13, 2022: Participants' submissions due.
 
 ### Write-up Phase
