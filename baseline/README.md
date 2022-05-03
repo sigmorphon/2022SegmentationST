@@ -118,6 +118,6 @@ Mongolian - BERT Tokenizer (uncased)
 | Language  | Precison | Recall | F-measure | Lev. distance |
 |-----------|:--------:|:------:|:---------:|:-------------:|
 | Czech     |   36.76  |  30.35 |   33.25   |     21.01     |
-| English   |   63.08  |  64.39 |   63.73   |      5.81     |
+| English   |   63.68  |  65.77 |   64.71   |      5.50     |
 | Mongolian |   20.00  |  29.95 |   23.99   |     28.86     |
 
