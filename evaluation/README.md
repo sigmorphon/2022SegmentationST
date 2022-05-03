@@ -78,10 +78,10 @@ python evaluate.py --guess ../baseline/eng.sentence.dev.bert.tsv --gold ../data/
 
 ```
 category: all
-distance        5.81
-f_measure       63.73
-precision       63.08
-recall  64.39
+distance        5.50
+f_measure       64.71
+precision       63.68
+recall  65.77
 ```
 
 ```
