@@ -131,6 +131,10 @@ We will provide python evaluation scripts, reporting the following evaluation me
 - F-measure - the harmonic mean of the precision and recall
 - Edit distance - average Levenshtein distance between the predicted output and the gold instance.
 
+## Submission
+
+Please submit your team's results to khuyagbaatar.b@gmail.com CCing your team mates by May 13rd, 2022. Each submission should be a .tar.gz or .zip file.
+
 ## Timeline
 
 ### Development Phase
