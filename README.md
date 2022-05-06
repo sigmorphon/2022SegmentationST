@@ -133,7 +133,7 @@ We will provide python evaluation scripts, reporting the following evaluation me
 
 ## Submission
 
-Please submit your team's results to khuyagbaatar.b@gmail.com CCing your teammates by May 13rd, 2022. Each submission should be a .tar.gz or .zip file.
+Please submit your team's results to khuyagbaatar.b@gmail.com CCing your teammates by May 13th, 2022. Each submission should be a .tar.gz or .zip file.
 
 ## Timeline
 
