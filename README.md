@@ -112,7 +112,7 @@ Development languages are:
 |           | train | dev  | test |
 |-----------|-------|------|------|
 | Czech     | 1000  | 500  | 500  |
-| English   | 11007 | 1783 | 1846 |
+| English   | 11007 | 1783 | 1845 |
 | Mongolian | 1000  | 500  | 600  |
 
 ### Baseline results
